@@ -66,6 +66,16 @@ summary.aov(model1)
 
 The probability of this data not having a difference is 0.000236. This tells us that there's a difference, yet we have to run a multiple compassion test to find out these differences, and sort out which categories are different from which categories. 
 
+```{r}
+a <- TukeyHSD (model1, conf.level=.99)
+par(mar = c(3, 15.7, 2, 2))
+plot(a,las=2)
+```
+
+What this graph displays is that when running the turkeyHSD test, both LT high school and graduate and high school as well as high school and graduate have statistical differences at the 95% level. High school and graduate are statistically different. LT high school and graduate are also statistically different at the 95% level. 
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+
