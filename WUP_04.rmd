@@ -59,6 +59,12 @@ The data shows that the average for Graduate degree is 10 being the highest, the
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+```{r}
+model1 <- aov(WORDSUM~DEGREE,data=mydata)
+summary.aov(model1)
+```
+
+The probability of this data not having a difference is 0.000236. This tells us that there's a difference, yet we have to run a multiple compassion test to find out these differences, and sort out which categories are different from which categories. 
 
 # Discussion and Conclusion
 
